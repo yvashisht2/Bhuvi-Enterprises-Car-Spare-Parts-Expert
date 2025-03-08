@@ -26,6 +26,10 @@
     <div class="container">
         <h2 class="">Request Car Spare Part</h2>
         <form id="requestForm">
+
+                   <!-- Phone Number Input Field -->
+            <label for="phoneNumber">Your Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
             <!-- Car Make (Brand) Dropdown -->
             <label for="carMake">Car Make (Brand):</label>
             <select id="carMake" name="carMake" required>
@@ -68,9 +72,7 @@
             <label for="partImage">Upload Part Image:</label>
             <input type="file" id="partImage" name="partImage" accept="image/*">
 
-             <!-- Phone Number Input Field -->
-            <label for="phoneNumber">Your Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+      
 
             <!-- Submit Button -->
             <button type="submit">Submit Request</button>
