@@ -1,0 +1,170 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Background.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center;     /* Centers the content vertically */
+    background-color: #232f3e; /* Solid background color */
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Add space between logo and text */
+}
+
+.logo {
+    width: 66px;
+    height: 72px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.whatsapp, .email {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.whatsapp:hover, .email:hover {
+    color: #ffcc00;
+}
+
+.company-name {
+    text-align: center;   /* Ensures text is centered horizontally */
+    flex-grow: 1;          /* Makes sure it takes the available space */
+}
+
+.company-name h1 {
+    font-size: 36px; /* Large font for "Car Spare Parts Expert" */
+    font-weight: bold;
+    margin: 0;
+}
+
+.company-name p {
+    font-size: 16px; /* Smaller font for "by Bhuvi Enterprises" */
+    margin-top: 5px;
+    color: #f4f4f4; /* Light grey for the smaller text */
+}
+
+/* Form Styles */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.container h2 {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+    text-align: center; /* Center the heading text */
+    margin-bottom: 20px;
+}
+.container h2 {
+    font-size: 24px;         /* Adjust font size as needed */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"], form input[type="number"], form input[type="file"], form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    .company-name {
+        margin-top: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

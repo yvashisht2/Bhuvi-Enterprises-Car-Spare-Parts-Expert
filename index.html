@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Spare Part Request</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Company Logo" class="logo">
+            <div class="contact-info">
+                <a href="tel:+91 8700459484" class="whatsapp">📞 +91 8700459484</a>
+                <a href="bhivienter23@gmail.com" class="email">✉ bhivienter23@gmail.com</a>
+            </div>
+        </div>
+        <div class="company-name">
+            <h1>Car Spare Parts Expert</h1>
+        <p>by Bhuvi Enterprises</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="">Request Car Spare Part</h2>
+        <form id="requestForm">
+            <!-- Car Make (Brand) Dropdown -->
+            <label for="carMake">Car Make (Brand):</label>
+            <select id="carMake" name="carMake" required>
+                <option value="">Select Car Make</option>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Datsun">Datsun</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Ford">Ford</option>
+                <option value="Honda">Honda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Mahindra">Mahindra</option>
+                <option value="Maruti">Maruti</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Mitsubishi">Mitsubishi</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Renault">Renault</option>
+                <option value="Skoda">Skoda</option>
+                <option value="Tata">Tata</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Volkswagen">Volkswagen</option>
+            </select>
+
+            <!-- Car Model -->
+            <label for="carModel">Car Model:</label>
+            <input type="text" id="carModel" name="carModel" required>
+
+            <!-- Car Model Year Dropdown -->
+            <label for="carModelYear">Car Model Year:</label>
+            <select id="carModelYear" name="carModelYear" required>
+                <!-- Car years will be dynamically generated here -->
+            </select>
+
+            <!-- Spare Part Name -->
+            <label for="partName">Spare Part Name:</label>
+            <input type="text" id="partName" name="partName" required>
+
+            <!-- Part Image Upload -->
+            <label for="partImage">Upload Part Image:</label>
+            <input type="file" id="partImage" name="partImage" accept="image/*">
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+
+    <!-- Confirmation Popup -->
+    <div id="confirmationPopup" class="popup">
+        <div class="popup-content">
+            <p>Your request has been submitted!</p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
