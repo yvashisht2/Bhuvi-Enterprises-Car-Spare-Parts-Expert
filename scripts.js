@@ -21,10 +21,11 @@ document.getElementById("requestForm").addEventListener("submit", function(event
     const carModelYear = document.getElementById("carModelYear").value;
     const partName = document.getElementById("partName").value;
     const partImage = document.getElementById("partImage").files[0];
+    const phoneNumber = document.getElementById("phoneNumber").value; 
 
     // URL for WhatsApp integration
-    const whatsappNumber = ""; // Replace with your WhatsApp number
-    let message = `Hello, I need the following spare part:\nCar Make: ${carMake}\nCar Model: ${carModel}\nCar Model Year: ${carModelYear}\nPart Name: ${partName}`;
+    const whatsappNumber = "8700459484"; // Replace with your WhatsApp number
+   let message = `Hello, I need the following spare part:\nCar Make: ${carMake}\nCar Model: ${carModel}\nCar Model Year: ${carModelYear}\nPart Name: ${partName}\nPhone Number: ${phoneNumber}`;
 
     // Check if the image file is selected and add its link if needed
     let imageURL = "";
