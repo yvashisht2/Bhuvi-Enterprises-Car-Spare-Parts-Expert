@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentYear = new Date().getFullYear();
     const startYear = 2008;
 
-    // Create options for the Car Model Year (2008 to current year)
     for (let year = currentYear; year >= startYear; year--) {
         const option = document.createElement("option");
         option.value = year;
@@ -12,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         carModelYearSelect.appendChild(option);
     }
 });
+
 
 document.getElementById("requestForm").addEventListener("submit", function(event) {
     event.preventDefault();
@@ -21,31 +21,34 @@ document.getElementById("requestForm").addEventListener("submit", function(event
     const carModelYear = document.getElementById("carModelYear").value;
     const partName = document.getElementById("partName").value;
     const partImage = document.getElementById("partImage").files[0];
-    const phoneNumber = document.getElementById("phoneNumber").value; 
+    const phoneNumber = document.getElementById("phoneNumber").value;
 
-    // URL for WhatsApp integration
-    const whatsappNumber = "8700459484"; // Replace with your WhatsApp number
-   let message = `Hello, I need the following spare part:\nCar Make: ${carMake}\nCar Model: ${carModel}\nCar Model Year: ${carModelYear}\nPart Name: ${partName}\nPhone Number: ${phoneNumber}`;
+    const whatsappNumber = "8700459484"; // Your WhatsApp number
 
-    // Check if the image file is selected and add its link if needed
-    let imageURL = "";
+    let message = `Hello, I need the following spare part:
+Car Make: ${carMake}
+Car Model: ${carModel}
+Car Model Year: ${carModelYear}
+Part Name: ${partName}
+Phone Number: ${phoneNumber}`;
+
     if (partImage) {
-        // You would need to upload the image to a server to get a URL, here's a placeholder:
-        imageURL = "https://example.com/uploads/" + partImage.name;
-        message += `\nImage URL: ${imageURL}`;
+        message += "\nImage uploaded (image URLs need server support).";
     }
 
-    // WhatsApp message link
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-    // Redirect to WhatsApp
+    // Redirect to WhatsApp and show popup after a delay
     window.location.href = whatsappLink;
 
-    // Show confirmation popup
-    document.getElementById("confirmationPopup").style.display = "flex";
+    setTimeout(() => {
+        document.getElementById("confirmationPopup").style.display = "flex";
+    }, 2000); // Show popup after 2 seconds to allow redirect
 });
 
-// Close the popup
 function closePopup() {
     document.getElementById("confirmationPopup").style.display = "none";
 }
+
+
+// Let me know if you want me to add proper image hosting or tweak the popup timing! 🚀
