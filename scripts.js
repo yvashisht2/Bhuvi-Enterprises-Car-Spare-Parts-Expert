@@ -36,7 +36,7 @@ Phone Number: ${phoneNumber}`;
         message += "\nImage uploaded (image URLs need server support).";
     }
 
-    const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
 
     // Redirect to WhatsApp and show popup after a delay
     window.location.href = whatsappLink;
