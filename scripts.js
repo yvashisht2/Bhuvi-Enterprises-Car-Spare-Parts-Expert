@@ -23,7 +23,7 @@ document.getElementById("requestForm").addEventListener("submit", function(event
     const partImage = document.getElementById("partImage").files[0];
     const phoneNumber = document.getElementById("phoneNumber").value;
 
-    const whatsappNumber = "8700459484"; // Your WhatsApp number
+    const whatsappNumber = "918700459484"; // Your WhatsApp number
 
     let message = `Hello, I need the following spare part:
 Car Make: ${carMake}
